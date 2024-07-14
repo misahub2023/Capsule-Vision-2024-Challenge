@@ -1,11 +1,6 @@
-import os
-import argparse
 import numpy as np
 import pandas as pd
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
-from tensorflow.keras.applications.vgg16 import preprocess_input
-from tensorflow.keras.models import load_model
-from sklearn.metrics import classification_report, roc_auc_score, accuracy_score
+from sklearn.metrics import classification_report, roc_auc_score
 
 def generate_classification_report(y_true, y_pred):
     class_columns=['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']

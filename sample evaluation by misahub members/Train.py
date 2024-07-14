@@ -17,7 +17,6 @@ def main(args):
     X_train, y_train, _ = get_data(args.train_excel_path, args.base_dir, image_size=args.image_size)
     X_val, y_val, _ = get_data(args.val_excel_path, args.base_dir, image_size=args.image_size)
 
-    class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
     class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(np.argmax(y_train, axis=1)), y=np.argmax(y_train, axis=1))
     class_weights_dict = dict(enumerate(class_weights))
     
