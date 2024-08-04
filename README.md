@@ -9,7 +9,12 @@
 - [Dataset](#dataset)
   - [Dataset Structure](#dataset-structure)
 - [Sample Scripts for Participants](#sample-scripts-for-participants)
-
+  - [Data_loader Script](#data_loader)
+  - [Eval_metrics_gen_excel](#eval_metrics_gen_excel)
+  - [Evaluate_model](#evaluate_model)
+- [Sample Evaluation by Organizing members](#sample-evaluation-by-organizing-members)
+- [Submission Format](#submission-format)
+- [Contributions](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/edit/main/README.md#contributions)
 ## Challenge Overview
 The aim of the challenge is to provide an opportunity
 for the development, testing and evaluation of AI models
@@ -74,6 +79,120 @@ Dataset/
     └── validation_data.xlsx
 ```
 ## Sample Scripts for Participants
+### Data_loader
+The [Data_loader.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Data_loader.py) script fetches the data from Figshare, unzips and saves it in the current directory.
+
+```bash
+!python Data_loader.py
+```
+### Eval_metrics_gen_excel 
+The [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script contains 2 functions:
+
+#### save_predictions_to_excel
+  
+The `save_predictions_to_excel` function processes the predicted probabilities for a set of images, determines the most likely class for each image, and then saves the results (including both the predicted probabilities and the predicted classes) to an Excel file.
+The function takes 3 parameters:
+   - `image_paths`: A list of paths to the images. Each path corresponds to an image that was used for prediction.
+   - `y_pred`: A numpy array containing the predicted probabilities for each class. Each row corresponds to an image, and each column corresponds to a class.
+   - `output_path`: The file path where the Excel file will be saved.
+
+A sample of the excel file which will be generated using this function is available [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx)
+
+Note: The y_pred array should have the predicted probabilites in the order: `['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']`
+
+#### generate_metrics_report
+  
+The `generate_metrics_report` function generates all the relevant metrics for evaluating a multi-class classification, including classwise and aggregate specificity, ROC AUC scores, precision-recall scores, sensitivity, and F1 scores. This function can be used to evaluate the performance of a trained model on validation data.
+
+The function takes 2 parameters:
+  - y_true: The ground truth multi-class labels in one-hot encoded format.
+  - y_pred: The predicted probabilities for each class.
+
+Returns: A JSON string containing the detailed metrics report.
+
+Note: The y_pred and y_true array should have the predicted probabilites in the order: `['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']`
+
+#### Usage
+To run this script, you'll need to have the following libraries installed:
+
+1. **NumPy**: For numerical operations and array handling.
+   - Install using: `pip install numpy`
+
+2. **Pandas**: For data manipulation and analysis.
+   - Install using: `pip install pandas`
+
+3. **Scikit-learn**: For machine learning metrics and utilities.
+   - Provides functions such as `classification_report`, `roc_auc_score`, `precision_recall_curve`, `recall_score`, and `f1_score`.
+   - Install using: `pip install scikit-learn`
+
+4. **JSON**: For parsing JSON data (included in Python standard library, no installation required).
+
+To install all required libraries, you can use the following command:
+
+```bash
+pip install numpy pandas scikit-learn
+```
+### Evaluate_model
+The [Evaluate_model.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Evaluate_model.py) script is a sample script which shows the usage of the functions from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. A VGG16 model has been evaluated in this script, participants can take inspiration from this for their own submissions.
+
+## Sample Evaluation by organizing members
+
+This directory contains extensive analysis of the dataset along with the evaluation of Custom CNN, Support vector machines, ResNet50 and VGG16 on the training and the validation data.
+
+## Submission Format
+
+Each team is required to submit their results via EMAIL to
+ask.misahub@gmail.com with following rules in mind.
+- The email should contain:
+  - Challenge name and Team name as the **SUBJECT
+LINE**.
+  - Team member names and affiliation in the **BODY
+OF THE EMAIL**.
+  - Contact number and email address in the **BODY
+OF THE EMAIL**.
+    A link of the github repository in public mode in
+the **BODY OF THE EMAIL**.
+  - A link of their report on any open preprint server of
+their choice (ArXiv, Authorea, BioRxiv, Figshare
+etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample%20report%20for%20submission.zip).
+  - Generated excel sheet (in xlsx format) as an attachment.
+    the excel sheet should be in the same format as [this](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx) and can be generated from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. Any other format will **NOT** be accepted and will lead to disqualification.
+- The github repository in public mode should contain the
+following:
+  - Developed code for training, validation, and testing
+in .py / .mat etc in readable format with comments.
+  - Stored model, associated weights or files (optional).
+  - Any utils or assets or config. or checkpoints.
+
+The submitted excel files will be evaluated using a semi-automated script to generate the relevant metrics against the true labels on the basis of which the participants will be ranked.
+
+Following checklist will be used to select the top three
+winning teams:
+- Best evaluation metrics (especially mean AUC) on
+testing dataset.
+- In case of ties:
+  * Model uniqueness and reproducibility.
+  * Readability of the submitted report and github
+repository.
+  * Unique methods of handling class-imbalance
+problems in the datasets.
+
+## Contributions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
