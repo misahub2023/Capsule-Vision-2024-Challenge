@@ -4,7 +4,8 @@
 - [Sample Report Overleaf](https://www.overleaf.com/project/668edec29a1be231946e844e)
 ## Table of Content
 - [Challenge Overview](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/README.md#challenge-overview)
-- [Dataset](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/edit/main/README.md#dataset)
+- [Challenge Timeline](#challenge-timeline)
+- [Dataset](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/README.md#dataset)
 ## Challenge Overview
 The aim of the challenge is to provide an opportunity
 for the development, testing and evaluation of AI models
