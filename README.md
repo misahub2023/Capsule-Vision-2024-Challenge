@@ -98,6 +98,7 @@ The function takes 3 parameters:
 
 A sample of the excel file which will be generated using this function is available [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx)
 
+The generated excel file for the test data is to be submitted through for evaluation.[Check here](#submission-format)
 Note: The y_pred array should have the predicted probabilites in the order: `['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']`
 
 #### generate_metrics_report
