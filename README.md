@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/e2d55d23-d32e-4214-a4cd-fec3328a13ef)
+![image](https://github.com/user-attachments/assets/7b0a2390-3bde-419f-8874-f65f83625c6a)
 # Capsule Vision Challenge 2024
 This is the Github Repository for the challenge based on the multiclass classification of Video Capsule Endoscopy images into 10 classes:
 
