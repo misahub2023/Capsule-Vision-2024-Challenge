@@ -2,10 +2,14 @@
 # Capsule Vision Challenge 2024
 - [Challenge Website](https://misahub.in/cv2024.html)
 - [Sample Report Overleaf](https://www.overleaf.com/project/668edec29a1be231946e844e)
+- [Dataset Link](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562)
 ## Table of Content
 - [Challenge Overview](#challenge-overview)
 - [Challenge Timeline](#challenge-timeline)
 - [Dataset](#dataset)
+  - [Dataset Structure](#dataset-structure)
+- [Sample Scripts for Participants](#sample-scripts-for-participants)
+
 ## Challenge Overview
 The aim of the challenge is to provide an opportunity
 for the development, testing and evaluation of AI models
@@ -41,6 +45,7 @@ and normal.
 | **Total Frames** |                | **497**      | **359**  | **1155**| **297**  | **340**       | **343**          | **12287**| **500** | **286** | **68** |
 
 ### Dataset Structure
+The images are organized into their respective classes for both the training and validation datasets as shown below:
 ```bash
 Dataset/
 ├── training
@@ -68,6 +73,8 @@ Dataset/
     └── Worms
     └── validation_data.xlsx
 ```
+## Sample Scripts for Participants
+
 
 
 
