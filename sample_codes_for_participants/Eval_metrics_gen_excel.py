@@ -23,46 +23,58 @@ def calculate_specificity(y_true, y_pred):
     return specificity
 
 def generate_metrics_report(y_true, y_pred):
-    class_columns=['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
+    class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
     metrics_report = {}
     
     y_true_classes = np.argmax(y_true, axis=1)
     y_pred_classes = np.argmax(y_pred, axis=1)
     
-    class_report = classification_report(y_true_classes, y_pred_classes, target_names=class_columns, output_dict=True)
+    class_report = classification_report(y_true_classes, y_pred_classes, target_names=class_columns, output_dict=True, zero_division=0)
     
     auc_roc_scores = {}
     for i, class_name in enumerate(class_columns):
-        auc_roc_scores[class_name] = roc_auc_score(y_true[:, i], y_pred[:, i])
+        try:
+            auc_roc_scores[class_name] = roc_auc_score(y_true[:, i], y_pred[:, i])
+        except ValueError:
+            auc_roc_scores[class_name] = 0.0  # Handle case where AUC cannot be computed
     
     mean_auc_roc = np.mean(list(auc_roc_scores.values()))
     auc_roc_scores['mean_auc'] = mean_auc_roc
     
     specificity_scores = {}
     for i, class_name in enumerate(class_columns):
-        specificity_scores[class_name] = calculate_specificity(y_true[:, i], np.argmax(y_pred, axis=1))
+        specificity_scores[class_name] = calculate_specificity(y_true[:, i], (y_pred[:, i] >= 0.5).astype(int))  # Thresholding y_pred
     
     mean_specificity = np.mean(list(specificity_scores.values()))
     specificity_scores['mean_specificity'] = mean_specificity
     
     average_precision_scores = {}
     for i, class_name in enumerate(class_columns):
-        precision, recall, _ = precision_recall_curve(y_true[:, i], y_pred[:, i])
-        average_precision_scores[class_name] = auc(recall, precision)
+        try:
+            precision, recall, _ = precision_recall_curve(y_true[:, i], y_pred[:, i])
+            average_precision_scores[class_name] = auc(recall, precision)
+        except ValueError:
+            average_precision_scores[class_name] = 0.0  # Handle case where PR curve cannot be computed
     
     mean_average_precision = np.mean(list(average_precision_scores.values()))
     average_precision_scores['mean_average_precision'] = mean_average_precision
     
     sensitivity_scores = {}
     for i, class_name in enumerate(class_columns):
-        sensitivity_scores[class_name] = recall_score(y_true[:, i], np.argmax(y_pred, axis=1), average='macro')
+        try:
+            sensitivity_scores[class_name] = recall_score(y_true[:, i], (y_pred[:, i] >= 0.5).astype(int), zero_division=0)
+        except ValueError:
+            sensitivity_scores[class_name] = 0.0  # Handle case where recall cannot be computed
     
     mean_sensitivity = np.mean(list(sensitivity_scores.values()))
     sensitivity_scores['mean_sensitivity'] = mean_sensitivity
     
     f1_scores = {}
     for i, class_name in enumerate(class_columns):
-        f1_scores[class_name] = f1_score(y_true[:, i], np.argmax(y_pred, axis=1), average='macro')
+        try:
+            f1_scores[class_name] = f1_score(y_true[:, i], (y_pred[:, i] >= 0.5).astype(int), zero_division=0)
+        except ValueError:
+            f1_scores[class_name] = 0.0  # Handle case where F1 score cannot be computed
     
     mean_f1_score = np.mean(list(f1_scores.values()))
     f1_scores['mean_f1_score'] = mean_f1_score
