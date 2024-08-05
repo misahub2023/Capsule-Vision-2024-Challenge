@@ -1,4 +1,3 @@
-import argparse
 from tensorflow.keras.models import load_model
 import numpy as np
 from Eval_metrics_gen_excel import save_predictions_to_excel,generate_metrics_report

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import classification_report, roc_auc_score
 import json
-from sklearn.metrics import classification_report, roc_auc_score, precision_recall_curve, auc, accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import classification_report, roc_auc_score, precision_recall_curve, auc, recall_score, f1_score
 
 
 def save_predictions_to_excel(image_paths, y_pred, output_path):
