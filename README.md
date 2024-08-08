@@ -28,9 +28,9 @@ classification pipeline with 10 class labels namely angioectasia, bleeding, eros
 lymphangiectasia, polyp, ulcer, worms, and normal.
 ## Challenge Timeline
 - **Launch of challenge:** August 15, 2024
-- **Registration open and closes:** August 15, 2024 - October 10, 2024
+- **Registration:** August 15, 2024 - October 10, 2024
 - **Release of Training Data:** August 15, 2024
-- **Release of Test Data and Result submission open and closes:** October 11, 2024 - October 25, 2024
+- **Release of Test Data and Result submission:** October 11, 2024 - October 25, 2024
 - **Result analysis by the organizing team:** October 26, 2024 - November 24, 2024
 - **Announcement of results for all teams:** November 25, 2024
 ## Dataset 
@@ -150,8 +150,7 @@ This directory contains extensive analysis of the dataset along with the evaluat
 
 ## Submission Format
 
-Each team is required to submit their results via EMAIL to
-ask.misahub@gmail.com with following rules in mind.
+Each team is required to submit their results in an EMAIL with the following structure to ask.misahub@gmail.com
 - The email should contain:
   - Challenge name and Team name as the **SUBJECT
 LINE**.
