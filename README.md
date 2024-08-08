@@ -86,7 +86,7 @@ Dataset/
 The [Data_loader.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Data_loader.py) script fetches the data from Figshare, unzips and saves it in the current directory.
 
 ```bash
-!python Data_loader.py
+python sample_codes_for_participants/Data_loader.py
 ```
 ### Eval_metrics_gen_excel 
 The [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script contains 2 functions:
@@ -101,7 +101,7 @@ The function takes 3 parameters:
 
 A sample of the excel file which will be generated using this function is available [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx)
 
-The generated excel file for the test data is to be submitted through for evaluation.[Check here](#submission-format)
+The generated excel file for the test data is to be submitted through for evaluation. [Check here](#submission-format)
 Note: The y_pred array should have the predicted probabilites in the order: `['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']`
 
 #### generate_metrics_report
@@ -138,6 +138,11 @@ pip install numpy pandas scikit-learn
 ```
 ### Evaluate_model
 The [Evaluate_model.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Evaluate_model.py) script is a sample script which shows the usage of the functions from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. A VGG16 model has been evaluated in this script, participants can take inspiration from this for their own submissions.
+
+The sample script that shows the metrics and creates the prediction excel file can be called via
+```bash
+python sample_codes_for_participants/Evaluate_model.py
+```
 
 ## Sample Evaluation by organizing members
 
