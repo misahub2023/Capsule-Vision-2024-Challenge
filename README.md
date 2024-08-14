@@ -185,8 +185,8 @@ repository.
   * Unique methods of handling class-imbalance
 problems in the datasets.
 
+## Citation
 
-### Citation
 - Challenge ArXiv
 @article{handa2024capsule,
   title={Capsule Vision 2024 Challenge: Multi-Class Abnormality Classification for Video Capsule Endoscopy},
