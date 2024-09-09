@@ -162,7 +162,7 @@ OF THE EMAIL**.
 the **BODY OF THE EMAIL**.
   - A link of their report on any open preprint server of
 their choice (ArXiv, Authorea, BioRxiv, Figshare
-etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample%20report%20for%20submission.zip).
+etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample_report_format/Sample%20report%20for%20submission.zip).
   - Generated excel sheet (in xlsx format) as an attachment.
     The excel sheet should be in the same format as [this](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx) for the test data and can be generated from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. Any other format will **NOT** be accepted and will lead to disqualification.
 - The github repository in public mode should contain the
