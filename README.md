@@ -207,6 +207,15 @@ url = "https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_
 doi = "10.6084/m9.figshare.26403469.v1",
 journal={Fishare}}
 
+- Testing Datasets
+@article{Handa2024,
+author = "Palak Handa and Amirreza Mahbod and Florian Schwarzhans and Ramona Woitek and Nidhi Goel and Deepti Chhabra and Shreshtha Jha and Manas Dhir and Pallavi Sharma and Dr. Deepak Gunjan and Jagadeesh Kakarla and Balasubramanian Ramanathan",
+title = "{Testing Dataset of Capsule Vision 2024 Challenge}",
+year = "2024",
+month = "10",
+url = "https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664",
+doi = "10.6084/m9.figshare.27200664.v1"
+}
 
 
 
