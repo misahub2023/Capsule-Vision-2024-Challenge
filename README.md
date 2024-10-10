@@ -187,6 +187,7 @@ repository.
 problems in the datasets.
 
 ## Citation
+Please using the following citations for citing our work.
 
 - Challenge ArXiv
   
@@ -208,6 +209,7 @@ doi = "10.6084/m9.figshare.26403469.v1",
 journal={Fishare}}
 
 - Testing Datasets
+  
 @article{Handa2024,
 author = "Palak Handa and Amirreza Mahbod and Florian Schwarzhans and Ramona Woitek and Nidhi Goel and Deepti Chhabra and Shreshtha Jha and Manas Dhir and Pallavi Sharma and Dr. Deepak Gunjan and Jagadeesh Kakarla and Balasubramanian Ramanathan",
 title = "{Testing Dataset of Capsule Vision 2024 Challenge}",
