@@ -107,7 +107,7 @@ Note: The y_pred array should have the predicted probabilites in the order: `['A
 
 #### generate_metrics_report
   
-The `generate_metrics_report` function generates all the relevant metrics for evaluating a multi-class classification, including classwise and aggregate specificity, ROC AUC scores, precision-recall scores, sensitivity, and F1 scores. This function can be used to evaluate the performance of a trained model on validation data.
+The `generate_metrics_report` function generates all the relevant metrics for evaluating a multi-class classification, including classwise and aggregate specificity, ROC AUC scores, precision-recall scores, sensitivity, F1 score, mean AUC and balanced accuracy score. This function can be used to evaluate the performance of a trained model on validation data.
 
 The function takes 2 parameters:
   - y_true: The ground truth multi-class labels in one-hot encoded format.
@@ -177,7 +177,7 @@ The submitted excel files will be evaluated using a semi-automated script to gen
 
 Following checklist will be used to select the top three
 winning teams:
-- Best evaluation metrics (especially mean AUC) on
+- Best evaluation metrics (mean AUC and balanced accuracy) on
 testing dataset.
 - In case of ties:
   * Model uniqueness and reproducibility.
