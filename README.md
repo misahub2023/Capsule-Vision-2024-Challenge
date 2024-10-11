@@ -2,10 +2,11 @@
 # Capsule Vision Challenge 2024: Multi-Class Abnormality Classification for Video Capsule Endoscopy
 - [Registration form](https://forms.gle/QemRirWysnGoGrKM6)
 - [Challenge Hosting Website](https://misahub.in/cv2024.html)
-- [Challenge ArXiv]()
+- [Challenge ArXiv](https://arxiv.org/abs/2408.04940)
 - [Challenge github repository](https://github.com/misahub2023/Capsule-Vision-2024-Challenge)
 - [Training and Validation Dataset Link](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562)
-- [Sample Report Overleaf](https://www.overleaf.com/project/668edec29a1be231946e844e)
+- [Testing Dataset Link](https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664?file=49717386)
+- [Sample Report Overleaf](https://www.overleaf.com/read/kwhvpznnbzwb#26d62a)
 ## Table of Content
 - [Challenge Overview](#challenge-overview)
 - [Challenge Timeline](#challenge-timeline)
@@ -162,7 +163,7 @@ OF THE EMAIL**.
 the **BODY OF THE EMAIL**.
   - A link of their report on any open preprint server of
 their choice (ArXiv, Authorea, BioRxiv, Figshare
-etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample%20report%20for%20submission.zip).
+etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample_report_format/Sample%20report%20for%20submission.zip).
   - Generated excel sheet (in xlsx format) as an attachment.
     The excel sheet should be in the same format as [this](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx) for the test data and can be generated from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. Any other format will **NOT** be accepted and will lead to disqualification.
 - The github repository in public mode should contain the
@@ -185,10 +186,38 @@ repository.
   * Unique methods of handling class-imbalance
 problems in the datasets.
 
+## Citation
+Please using the following citations for citing our work.
 
+- Challenge ArXiv
+  
+@article{handa2024capsule,
+  title={Capsule Vision 2024 Challenge: Multi-Class Abnormality Classification for Video Capsule Endoscopy},
+  author={Handa, Palak and Mahbod, Amirreza and Schwarzhans, Florian and Woitek, Ramona and Goel, Nidhi and Chhabra, Deepti and Jha, Shreshtha and Dhir, Manas and Gunjan, Deepak and Kakarla, Jagadeesh and others},
+  journal={arXiv preprint arXiv:2408.04940},
+  year={2024}}
+  
+- Training and Validation Datasets
+  
+@article{Handa2024,
+author = "Palak Handa and Amirreza Mahbod and Florian Schwarzhans and Ramona Woitek and Nidhi Goel and Deepti Chhabra and Shreshtha Jha and Manas Dhir and Deepak Gunjan and Jagadeesh Kakarla and Balasubramanian Raman",
+title = "{Training and Validation Dataset of Capsule Vision 2024 Challenge}",
+year = "2024",
+month = "7",
+url = "https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469",
+doi = "10.6084/m9.figshare.26403469.v1",
+journal={Fishare}}
 
-
-
+- Testing Datasets
+  
+@article{Handa2024,
+author = "Palak Handa and Amirreza Mahbod and Florian Schwarzhans and Ramona Woitek and Nidhi Goel and Deepti Chhabra and Shreshtha Jha and Manas Dhir and Pallavi Sharma and Dr. Deepak Gunjan and Jagadeesh Kakarla and Balasubramanian Ramanathan",
+title = "{Testing Dataset of Capsule Vision 2024 Challenge}",
+year = "2024",
+month = "10",
+url = "https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664",
+doi = "10.6084/m9.figshare.27200664.v1"
+}
 
 
 
