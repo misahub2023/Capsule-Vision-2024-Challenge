@@ -7,6 +7,7 @@
 - [Training and Validation Dataset Link](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562)
 - [Testing Dataset Link](https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664?file=49717386)
 - [Sample Report Overleaf](https://www.overleaf.com/read/kwhvpznnbzwb#26d62a)
+- [Submission Sanity Checker](https://capsulevisionchallengesanitychecker.streamlit.app)
 ## Table of Content
 - [Challenge Overview](#challenge-overview)
 - [Challenge Timeline](#challenge-timeline)
