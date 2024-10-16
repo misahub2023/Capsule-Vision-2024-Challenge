@@ -29,9 +29,10 @@ def get_data(excel_path, base_dir, image_size=(32, 32)):
     y = df[class_columns].values
     return X, y, df
 def load_test_data(test_dir, image_size=(32, 32)):
-    image_paths = [os.path.join(test_dir, fname) for fname in os.listdir(test_dir) if fname.lower().endswith(('jpg'))]
-    X_test = np.array([load_and_preprocess_image(path, image_size) for path in image_paths])
-    return X_test, image_paths
+    image_filenames = [fname for fname in os.listdir(test_dir) if fname.lower().endswith(('jpg'))]
+    X_test = np.array([load_and_preprocess_image(os.path.join(test_dir, fname), image_size) for fname in image_filenames])
+    return X_test, image_filenames
+
 #these parameters are also specific to the sample being shown here and can be changed
 base_dir = os.path.join(os.getcwd(),'Dataset')
 val_excel_path = os.path.join(os.getcwd(), 'Dataset', 'validation', 'validation_data.xlsx')
