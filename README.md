@@ -7,6 +7,7 @@
 - [Training and Validation Dataset Link](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562)
 - [Testing Dataset Link](https://figshare.com/articles/dataset/Testing_Dataset_of_Capsule_Vision_2024_Challenge/27200664?file=49717386)
 - [Sample Report Overleaf](https://www.overleaf.com/read/kwhvpznnbzwb#26d62a)
+- [Submission Sanity Checker](https://capsulevisionchallengesanitychecker.streamlit.app)
 ## Table of Content
 - [Challenge Overview](#challenge-overview)
 - [Challenge Timeline](#challenge-timeline)
@@ -165,7 +166,8 @@ the **BODY OF THE EMAIL**.
 their choice (ArXiv, Authorea, BioRxiv, Figshare
 etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample_report_format/Sample%20report%20for%20submission.zip).
   - Generated excel sheet (in xlsx format) as an attachment.
-    The excel sheet should be in the same format as [this](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx) for the test data and can be generated from the [Eval_metrics_gen_excel.py](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample_codes_for_participants/Eval_metrics_gen_excel.py) script. Any other format will **NOT** be accepted and will lead to disqualification.
+    The format of the excel sheet should match the sample given [here](https://capsulevisionchallengesanitychecker.streamlit.app). Please use the sanity checker to validate your file before submission.
+    Any other format will **NOT** be accepted and will lead to disqualification. 
 - The github repository in public mode should contain the
 following:
   - Developed code for training, validation, and testing
