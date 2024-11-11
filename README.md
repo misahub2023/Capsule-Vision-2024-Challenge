@@ -1,6 +1,6 @@
 ![ChallengeHeader](https://github.com/user-attachments/assets/e75f510b-02a8-4fec-b133-11f4ab6c828d)
 # Capsule Vision Challenge 2024: Multi-Class Abnormality Classification for Video Capsule Endoscopy
-- [Registration form](https://forms.gle/QemRirWysnGoGrKM6)
+- [Registration form](https://forms.gle/QemRirWysnGoGrKM6) (closed now)
 - [Challenge Hosting Website](https://misahub.in/cv2024.html)
 - [Challenge ArXiv](https://arxiv.org/abs/2408.04940)
 - [Challenge github repository](https://github.com/misahub2023/Capsule-Vision-2024-Challenge)
