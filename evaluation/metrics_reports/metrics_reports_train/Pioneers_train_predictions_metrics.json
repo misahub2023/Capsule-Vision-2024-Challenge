@@ -1,0 +1,9 @@
+{
+    "mean_auc": null,
+    "balanced_accuracy": null,
+    "avg_precision": null,
+    "avg_sensitivity": null,
+    "avg_f1": null,
+    "avg_specificity": null,
+    "class_wise_metrics": {}
+}

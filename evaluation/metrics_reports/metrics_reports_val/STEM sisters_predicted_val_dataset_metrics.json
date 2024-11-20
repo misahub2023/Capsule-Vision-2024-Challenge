@@ -1,0 +1,90 @@
+{
+    "mean_auc": 1.0,
+    "balanced_accuracy": 1.0,
+    "avg_precision": 1.0,
+    "avg_sensitivity": 1.0,
+    "avg_f1": 1.0,
+    "avg_specificity": 1.0,
+    "class_wise_metrics": {
+        "Angioectasia": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Bleeding": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Erosion": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Erythema": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Foreign Body": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Lymphangiectasia": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Normal": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Polyp": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Ulcer": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        },
+        "Worms": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "specificity": 1.0,
+            "accuracy": 1.0,
+            "auc": 1.0
+        }
+    }
+}

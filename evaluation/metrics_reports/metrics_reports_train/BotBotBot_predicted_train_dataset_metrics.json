@@ -1,0 +1,90 @@
+{
+    "mean_auc": 0.48754952842954624,
+    "balanced_accuracy": 0.10251017241781664,
+    "avg_precision": 0.12067574910337839,
+    "avg_sensitivity": 0.10251017241781664,
+    "avg_f1": 0.09146836577999443,
+    "avg_specificity": 0.9014307753845785,
+    "class_wise_metrics": {
+        "Angioectasia": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9693142234158534,
+            "auc": 0.6104435016890533
+        },
+        "Bleeding": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9778232775813014,
+            "auc": 0.3889356249479518
+        },
+        "Erosion": {
+            "precision": 0.44155844155844154,
+            "recall": 0.025241276911655532,
+            "f1_score": 0.047752808988764044,
+            "specificity": 0.9975367341677885,
+            "accuracy": 0.9278857659478289,
+            "auc": 0.5522035142141742
+        },
+        "Erythema": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9816257611614859,
+            "auc": 0.3866095499949116
+        },
+        "Foreign Body": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9789400909405164,
+            "auc": 0.5628754268201503
+        },
+        "Lymphangiectasia": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9788337277634483,
+            "auc": 0.48787475654876483
+        },
+        "Normal": {
+            "precision": 0.7651990494753425,
+            "recall": 0.9998604472665108,
+            "f1_score": 0.8669308488111803,
+            "specificity": 0.01677101967799642,
+            "accuracy": 0.7660541920387162,
+            "auc": 0.5910155177053786
+        },
+        "Polyp": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9691014970617172,
+            "auc": 0.2136061365191082
+        },
+        "Ulcer": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9823703034009625,
+            "auc": 0.5597491895115644
+        },
+        "Worms": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "specificity": 1.0,
+            "accuracy": 0.9957986545058101,
+            "auc": 0.5221820663444057
+        }
+    }
+}
