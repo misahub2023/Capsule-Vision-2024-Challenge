@@ -184,7 +184,7 @@ winning teams:
 testing dataset.
 ## Results
 ## Citation
-Please using the following citations for citing our work.
+Please use the following citations for citing our work.
 
 - Challenge ArXiv
   
