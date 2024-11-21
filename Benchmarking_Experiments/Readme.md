@@ -1,4 +1,4 @@
-# Classification Benchmarking of the Capsule Vision 2024 Challenge
+# Benchmarking experiments conducted by the organizing team of the Capsule Vision 2024 Challenge
 This repository contains scripts used in the performance evaluation of 6 artificial intelligence models for the classification of the [Capsule Vision 2024 Challenge Dataset](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562). Six classification-based pipelines have been trained, validated, and tested.
 The models employed are:
 * VGG19
