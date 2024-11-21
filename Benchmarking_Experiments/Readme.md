@@ -341,4 +341,4 @@ The results and findings will be released in the form of a research paper soon, 
 
 
 ## Contributions
-Pallavi Sharma contributed in developing the benchmarking pipeline and developing the github repository for it.
+Pallavi Sharma contributed in developing the benchmarking pipeline.
