@@ -1,6 +1,6 @@
 # Benchmarking experiments conducted by the organizing team of the Capsule Vision 2024 Challenge
-This repository contains scripts used in the performance evaluation of 6 artificial intelligence models for the classification of the [Capsule Vision 2024 Challenge Dataset](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562). Six classification-based pipelines have been trained, validated, and tested.
-The models employed are:
+This repository contains scripts used in the performance evaluation of 6 transfer learning models for the classification of the [Capsule Vision 2024 Challenge Dataset](https://figshare.com/articles/dataset/Training_and_Validation_Dataset_of_Capsule_Vision_2024_Challenge/26403469?file=48018562). Six classification-based experiments were trained, validated, and tested.
+The models employed were:
 * VGG19
 * Xception
 * ResNet50V2
@@ -8,50 +8,6 @@ The models employed are:
 * InceptionV3
 * InceptionResNetV2
 
-
-## Dataset
-Organize your dataset in the following structure: The dataset comprises gastroenterology images divided into 10 abnormality categories.
-The dataset structure was as follows:
-```
-	Dataset/
-	├── training/
-	│   ├── Angioectasia/
-	│   ├── Bleeding/
-	│   ├── Erosion/
-	│   ├── Erythema/
-        │   ├── Foreign Body/
-	│   ├── Lymphangiectasia/
-	│   ├── Normal/
-	│   ├── Polyp/
-	│   ├── Ulcer/
-	│   ├── Worms/
-	│   ├── training_data.xlsx
-	├── validation/
-	│   ├── Angioectasia/
-   	│   ├── Bleeding/
-    	│   ├── Erosion/
-	│   ├── Erythema/
-   	│   ├── Foreign Body/
-    	│   ├── Lymphangiectasia/
-	│   ├── Normal/
-   	│   ├── Polyp/
-    	│   ├── Ulcer/
-	│   ├── Worms/
-   	│   ├── validation_data.xlsx/
-    	├── Test set for us, with excel sheet and separated /
-	   ├── Angioectasia/
-	   ├── Bleeding/
-	   ├── Erosion/
-	   ├── Erythema/
-           ├── Foreign Body/
-	   ├── Lymphangiectasia/
-	   ├── Normal/
-	   ├── Polyp/
-	   ├── Ulcer/
-	   ├── Worms/
-	   ├── test_data.xlsx
-	
-```	
 ## Benchmarking Code Usage:
 
 1. Function defined to load images and labels from excel file data, and converting images into numpy array
@@ -337,8 +293,7 @@ All the models were trained for a total of 250 epochs, without any preprocessing
 
 
 ## Results
-The results and findings will be released in the form of a research paper soon, the preprint has been released and can be accessed at [link](https://arxiv.org/abs/2408.04940).
-
+The results and findings have been released on our arXiv.
 
 ## Contributions
-Pallavi Sharma contributed in developing the benchmarking pipeline.
+Pallavi Sharma contributed in running the experiments and developing the github folder.
