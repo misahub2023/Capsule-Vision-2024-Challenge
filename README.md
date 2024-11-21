@@ -20,6 +20,7 @@
 - [Sample Evaluation by Organizing members](#sample-evaluation-by-organizing-members)
 - [Submission Format](#submission-format)
 - [Contributions](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/edit/main/README.md#contributions)
+- [Results](https://github.com/misahub2023/Capsule-Vision-2024-Challenge/edit/main/README.md#results)
 ## Challenge Overview
 The aim of the challenge was to provide an opportunity
 for the development, testing and evaluation of AI models
@@ -181,7 +182,7 @@ Following checklist was used to select the top three
 winning teams:
 - Combined metric (average of mean AUC and balanced accuracy) on
 testing dataset.
-
+## Results
 ## Citation
 Please using the following citations for citing our work.
 
