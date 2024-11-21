@@ -64,44 +64,44 @@ The dataset structure was as follows:
 	def get_data(excel_path, base_dir):
     		df = pd.read_excel(excel_path)
     		df = df.dropna(subset=['image_path'])
-    		class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
-    		X = np.array([load_and_preprocess_image(os.path.join(base_dir,path.replace("\\","/"))) for path in df['image_path'].values])
+    		class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 		'Normal', 'Polyp', 'Ulcer', 'Worms']
+    		X = np.array([load_and_preprocess_image(os.path.join(base_dir,path.replace("\\","/"))) for path in 			df['image_path'].values])
     		y = df[class_columns].values
     		return X, y, df
 	```
-  Loading testing images and processing them.
+2. Loading testing images and processing them.
 	```
 	def get_test_data(excel_path,base_dir):
     		df = pd.read_excel(excel_path)
     		df = df.dropna(subset=['image_path'])
 	        class_column=['class_label']
-     		x = np.array([load_and_preprocess_image(os.path.join(base_dir,path.replace("\\","/"))) for path in df['image_path'].values])
+     		x = np.array([load_and_preprocess_image(os.path.join(base_dir,path.replace("\\","/"))) for path in 			df['image_path'].values])
                 y= df[class_column].values
       		return x,y,df
 	```
-2. Define paths to excel files and base directory.
+3. Define paths to Excel files and base directory.
 
 	```
 	train_excel_path = "/workspace/Documents/Pallavi/Dataset/training/training_data.xlsx"
 	val_excel_path = "/workspace/Documents/Pallavi/Dataset/validation/validation_data.xlsx"
-	test_excel_path = "/workspace/Documents/Pallavi/Dataset/Test set for us, with excel sheet and seperated/test_data.xlsx" 
+	test_excel_path = "/workspace/Documents/Pallavi/Dataset/Test set for us, with excel sheet and 			seperated/test_data.xlsx" 
 	base_dir = "/workspace/Documents/Pallavi/Dataset"
 
 	```
-3. Loading training, validation and testing images.
+4. Loading training, validation, and testing images.
 
 	```
 	X_train, y_train, train_df = get_data(train_excel_path, base_dir)
 	X_val, y_val, val_df = get_data(val_excel_path, base_dir)
 	X_test, y_test, test_df = get_test_data(test_excel_path,base_dir)
 	```
-4. Defining categories for classification
+5. Defining categories for classification
 
 	```
 	categories = ['Angioectasia','Bleeding', 'Erosion','Erythema','Foreign Body',
                             'Lymphangiectasia','Normal','Polyp','Ulcer','Worms']
 	```
-5. Augmentation - For benchmarking, model is trained without augmentation for that following are set.
+6. Augmentation - For benchmarking, the model is trained without augmentation for the following are set.
 
 	```
 	datagen=ImageDataGenerator(
@@ -136,13 +136,13 @@ The dataset structure was as follows:
 
 	```
 	
-6. Baseline model is initialized which is trained on the *ImageNet* dataset, its top layers of the network should not be included, and defines the input images shape.
+7. The baseline model is initialized which is trained on the *ImageNet* dataset, its top layers of the network should not be included, and defines the input images shape.
 In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`, `InceptionV3`, `InceptionResNetV2`) can be intialized.
 	```
 	base_model= MobileNetV2(weights='imagenet', include_top=False,input_shape=(224,224,3))
 	```
 
-7. After initializing base model, a custom classification head is added on top of the model so that it works for our dataset.
+8. After initializing base model, a custom classification head is added on top of the model so that it works for our dataset.
 
 	```
 	# Get the output from the base model
@@ -164,21 +164,21 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 
 	```
 
-8. Combining base model input and the custom prediction layers 
+9. Combining base model input and the custom prediction layers 
 
 	```
 	model = Model(inputs=base_model.input, outputs=predictions)
 
 	```
-9. Freezing all layers in the base model to prevent them from being updating during training
+10. Freezing all layers in the base model to prevent them from being updated during training
 	```
 	for layer in base_model.layers:
     	    layer.trainable = False
 	```
-10. Compiling the Model. Parameters are set for this are -
+11. Compiling the Model. The parameters set for this are -
 
 * `--optimizer` - Name of the optimizer to use (e.g., `Adam`,`SGD`,`RMSprop`).
-* `--loss` - Loss function to use for multiclassification is `categorical_crossentropy`.
+* `--loss` - The loss function to use for multiclassification is `categorical_crossentropy`.
 * `--metrics` - Metrics functions are defined to evaluate the performance of a model during training, validation, and testing. These are for monitoring purposes. 
 * `--weighted_metrics` - Weighted metrics are extension of regular metrics. This is useful when dealing with *class imbalance* or assigning more importance to certain data points.
 
@@ -193,7 +193,7 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
     		# pss_evaluation_shards=0
               )
 	```
-11. Total number of trainable and non-trainable parameters are calculated in the model.
+12. Total number of trainable and non-trainable parameters are calculated in the model.
 
 	```
 	trainable_params = sum(K.count_params(layer) for layer in model.trainable_weights)
@@ -204,13 +204,13 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 
 	```
 
-12. Creating CSV logger file to store all logs of model while training.
+13. Creating CSV logger file to store all logs of model while training.
 
 	```
 	csv_logger = CSVLogger("model_history_log.csv", append=True)
 	```
 
-13. Training the model.
+14. Training the model.
 
 * `--batch_size` - batch size for training (default is 32).
 * `--epochs` - Number of epochs to train.
@@ -231,12 +231,12 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 
 	```
 
-14. Evaluation of the trained model on each classification and taking average of their metrics results to conclude overall result of the trained model. Metrics evaluated for the model are `mean_auc`,`mean_specificity`,`mean_average_precision`,`mean_sensitivity`,`mean_f1_score`,`balanced_accuracy`.
+15. Evaluation of the trained model on each classification and taking average of their metrics results to conclude overall result of the trained model. Metrics evaluated for the model are `mean_auc`,`mean_specificity`,`mean_average_precision`,`mean_sensitivity`,`mean_f1_score`,`balanced_accuracy`.
 
 	```
 	# Evaluation Metrics Generate Excel
 	def save_predictions_to_excel(image_paths, y_pred, output_path,Dataset=None):
-        	class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
+        	class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 		'Normal', 'Polyp', 'Ulcer', 'Worms']
         	y_pred_classes = np.argmax(y_pred, axis=1)
         	predicted_class_names = [class_columns[i] for i in y_pred_classes]
         	df_prob = pd.DataFrame(y_pred, columns=class_columns)
@@ -253,13 +253,13 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
         	specificity = tn / (tn + fp) if (tn + fp) > 0 else 0
         	return specificity
 	def generate_metrics_report(y_true, y_pred):
-        	class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']
+        	class_columns = ['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 		'Normal', 'Polyp', 'Ulcer', 'Worms']
         	metrics_report = {}
 
         	y_true_classes = np.argmax(y_true, axis=1)
 		# y_true_classes = y_true
         	y_pred_classes = np.argmax(y_pred, axis=1)
-		class_report = classification_report(y_true_classes, y_pred_classes, target_names=class_columns, output_dict=True, zero_division=0)
+		class_report = classification_report(y_true_classes, y_pred_classes, target_names=class_columns, 			output_dict=True, zero_division=0)
 
         	auc_roc_scores = {}
         	for i, class_name in enumerate(class_columns):
@@ -285,14 +285,14 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 
         	sensitivity_scores = {}
         	for i, class_name in enumerate(class_columns):
-            	sensitivity_scores[class_name] = recall_score(y_true[:, i], (y_pred[:, i] > 0.5).astype(int), average='binary', zero_division=0)
+            	sensitivity_scores[class_name] = recall_score(y_true[:, i], (y_pred[:, i] > 0.5).astype(int), 				average='binary', zero_division=0)
 
         	mean_sensitivity = np.mean(list(sensitivity_scores.values()))
         	sensitivity_scores['mean_sensitivity'] = mean_sensitivity
 
         	f1_scores = {}
         	for i, class_name in enumerate(class_columns):
-            	f1_scores[class_name] = f1_score(y_true[:, i], (y_pred[:, i] > 0.5).astype(int), average='binary', zero_division=0)
+            	f1_scores[class_name] = f1_score(y_true[:, i], (y_pred[:, i] > 0.5).astype(int), average='binary', 			zero_division=0)
 
         	mean_f1_score = np.mean(list(f1_scores.values()))
         	f1_scores['mean_f1_score'] = mean_f1_score
@@ -316,7 +316,7 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 
 	```
 
-15. Prediction on testing data and generating metrics report. This is done for training and validation data also.
+16. Prediction on testing data and generating metrics reports. This is also done for training and validation data.
 
 	```
 	y_test_pred = model.predict(X_test)
@@ -324,7 +324,7 @@ In same way other models (e.g., `VGG19`, `Xception`, `ResNet50V2`, `MobileNetV2`
 	print(test_metrics_rep)
 
 	```
-16. Saving the testing data predictions to excel.
+17. Saving the testing data predictions to Excel.
 
 	```
 	output_test_predictions="test_excel.xlsx"
