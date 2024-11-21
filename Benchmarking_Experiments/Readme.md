@@ -1,5 +1,5 @@
 # Benchmarking experiments conducted by the organizing team 
-This repository contains scripts used in the performance evaluation of 6 transfer learning models for the classification of the training, validation, and testing dataset released in the challenge. Six classification-based experiments were trained, validated, and tested.
+This repository contains scripts used in the performance evaluation of 6 transfer learning models for the automatic classification and prediction of the training, validation, and testing dataset released in the challenge. Six classification-based experiments were trained, validated, and tested.
 The models employed were:
 * VGG19
 * Xception
