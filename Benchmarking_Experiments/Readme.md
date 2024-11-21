@@ -10,7 +10,7 @@ The models employed are:
 
 
 ## Dataset
-Organize your dataset in the following structure:The dataset comprises gastroenterology images divided into 10 abnormality categories.
+Organize your dataset in the following structure: The dataset comprises gastroenterology images divided into 10 abnormality categories.
 The dataset structure was as follows:
 ```
 	Dataset/
