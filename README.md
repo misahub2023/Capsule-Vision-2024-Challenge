@@ -21,10 +21,10 @@
 - [Submission Format](#submission-format)
 - [Contributions](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/edit/main/README.md#contributions)
 ## Challenge Overview
-The aim of the challenge is to provide an opportunity
+The aim of the challenge was to provide an opportunity
 for the development, testing and evaluation of AI models
 for automatic classification of abnormalities captured in
-VCE video frames. It promotes the development of vendor-independent and
+VCE video frames. It promoted the development of vendor-independent and
 generalized AI-based models for automatic abnormality
 classification pipeline with 10 class labels namely angioectasia, bleeding, erosion, erythema, foreign body,
 lymphangiectasia, polyp, ulcer, worms, and normal.
@@ -36,10 +36,10 @@ lymphangiectasia, polyp, ulcer, worms, and normal.
 - **Result analysis by the organizing team:** October 26, 2024 - November 24, 2024
 - **Announcement of results for all teams:** November 25, 2024
 ## Dataset 
-The training and validation dataset has been developed using
+The training and validation dataset were developed using
 three publicly available (SEE-AI project dataset, KID,
 and Kvasir-Capsule dataset) and one private dataset (AIIMS) VCE datasets. The training and validation dataset
-consist of 37,607 and 16,132 VCE frames respectively mapped to 10 class labels namely angioectasia, bleeding, erosion, erythema, foreign body, lymphangiectasia, polyp, ulcer, worms,
+consisted of 37,607 and 16,132 VCE frames respectively mapped to 10 class labels namely angioectasia, bleeding, erosion, erythema, foreign body, lymphangiectasia, polyp, ulcer, worms,
 and normal.
 | Type of Data | Source Dataset | Angioectasia | Bleeding | Erosion | Erythema | Foreign Body | Lymphangiectasia | Normal | Polyp | Ulcer | Worms |
 |--------------|----------------|--------------|----------|---------|----------|---------------|------------------|--------|-------|-------|-------|
@@ -103,7 +103,7 @@ The function takes 3 parameters:
 
 A sample of the excel file which will be generated using this function is available [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/sample%20evaluation%20by%20organizing%20members/VGG16/validation_excel.xlsx)
 
-The generated excel file for the test data is to be submitted through for evaluation. [Check here](#submission-format)
+The generated excel file for the train, validation, and test data was to be submitted through for evaluation. [Check here](#submission-format)
 Note: The y_pred array should have the predicted probabilites in the order: `['Angioectasia', 'Bleeding', 'Erosion', 'Erythema', 'Foreign Body', 'Lymphangiectasia', 'Normal', 'Polyp', 'Ulcer', 'Worms']`
 
 #### generate_metrics_report
@@ -165,9 +165,9 @@ the **BODY OF THE EMAIL**.
   - A link of their report on any open preprint server of
 their choice (ArXiv, Authorea, BioRxiv, Figshare
 etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample_report_format/Sample%20report%20for%20submission.zip).
-  - Generated excel sheet (in xlsx format) as an attachment.
+  - Generated Excel sheet of the predicted train, validation, and test dataset (in xlsx format) as an attachment.
     The format of the excel sheet should match the sample given [here](https://capsulevisionchallengesanitychecker.streamlit.app). Please use the sanity checker to validate your file before submission.
-    Any other format will **NOT** be accepted and will lead to disqualification. 
+    Any other format will **NOT** be accepted and led to disqualification. 
 - The github repository in public mode should contain the
 following:
   - Developed code for training, validation, and testing
@@ -175,18 +175,12 @@ in .py / .mat etc in readable format with comments.
   - Stored model, associated weights or files (optional).
   - Any utils or assets or config. or checkpoints.
 
-The submitted excel files will be evaluated using a semi-automated script to generate the relevant metrics against the true labels on the basis of which the participants will be ranked.
+The submitted excel files were evaluated using a semi-automated script to generate the relevant metrics against the true labels on the basis of which the participants were ranked.
 
-Following checklist will be used to select the top three
+Following checklist was used to select the top three
 winning teams:
-- Best evaluation metrics (mean AUC and balanced accuracy) on
+- Common metric (average of mean AUC and balanced accuracy) on
 testing dataset.
-- In case of ties:
-  * Model uniqueness and reproducibility.
-  * Readability of the submitted report and github
-repository.
-  * Unique methods of handling class-imbalance
-problems in the datasets.
 
 ## Citation
 Please using the following citations for citing our work.
