@@ -168,7 +168,7 @@ their choice (ArXiv, Authorea, BioRxiv, Figshare
 etc) in the **BODY OF THE EMAIL**. The report should be in the latex format given [here](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/blob/main/Sample_report_format/Sample%20report%20for%20submission.zip).
   - Generated Excel sheet of the predicted train, validation, and test dataset (in xlsx format) as an attachment.
     The format of the excel sheet should match the sample given [here](https://capsulevisionchallengesanitychecker.streamlit.app). Please use the sanity checker to validate your file before submission.
-    Any other format will **NOT** be accepted and led to disqualification. 
+    Any other format was **NOT** accepted and led to disqualification. 
 - The github repository in public mode should contain the
 following:
   - Developed code for training, validation, and testing
