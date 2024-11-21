@@ -179,7 +179,7 @@ The submitted excel files were evaluated using a semi-automated script to genera
 
 Following checklist was used to select the top three
 winning teams:
-- Common metric (average of mean AUC and balanced accuracy) on
+- Combined metric (average of mean AUC and balanced accuracy) on
 testing dataset.
 
 ## Citation
