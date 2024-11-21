@@ -19,7 +19,6 @@
   - [Evaluate_model](#evaluate_model)
 - [Sample Evaluation by Organizing members](#sample-evaluation-by-organizing-members)
 - [Submission Format](#submission-format)
-- [Contributions](https://github.com/misahub2023/Capsule-Vision-2024-Challenge-/edit/main/README.md#contributions)
 - [Results](https://github.com/misahub2023/Capsule-Vision-2024-Challenge/edit/main/README.md#results)
 ## Challenge Overview
 The aim of the challenge was to provide an opportunity
@@ -182,7 +181,8 @@ Following checklist was used to select the top three
 winning teams:
 - Combined metric (average of mean AUC and balanced accuracy) on
 testing dataset.
-## Results
+## Results 
+The script gen_metrics_report_val_train.py was used to generate the metrics for training and validation dataset whereas the script gen_metrics_test.py was used for the test set metrics. The submitted_excel_files folder contains the excel files received from the participants for each set, it contains the predicted probability for each class. The generated metrics for each team are present in metrics_reports folder which is further divided into train, val and test. training_data.xlsx, validation_data.xlsx and test_data.xlsx are the true files used in the scripts. 
 ## Citation
 Please use the following citations for citing our work.
 
