@@ -183,6 +183,80 @@ winning teams:
 testing dataset.
 ## Results 
 The script gen_metrics_report_val_train.py was used to generate the metrics for training and validation dataset whereas the script gen_metrics_test.py was used for the test set metrics. The submitted_excel_files folder contains the excel files received from the participants for each set, it contains the predicted probability for each class. The generated metrics for each team are present in metrics_reports folder which is further divided into train, val and test. training_data.xlsx, validation_data.xlsx and test_data.xlsx are the true files used in the scripts. 
+
+### Usage
+#### Requirements
+
+Before running the scripts, install the required Python dependencies. Use the provided `requirements.txt` file:
+
+#### Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+#### **Training/Validation Metrics Evaluation**
+
+This script processes training data and generates metrics reports for model predictions. It aligns prediction files with the ground truth data, computes metrics, and saves the results in a JSON format.
+
+#### Usage
+
+```bash
+python training_metrics.py <true_filepath> <pred_folder> <output_folder>
+```
+
+#### Parameters
+- **`<true_filepath>`**: Path to the Excel file containing ground truth data (e.g., `training_data.xlsx`).
+- **`<pred_folder>`**: Path to the folder containing prediction Excel files.
+- **`<output_folder>`**: Path to the folder where metrics reports will be saved.
+
+#### Example
+
+```bash
+python training_metrics.py training_data.xlsx training_fixed metrics_reports_train
+```
+
+---
+
+#### **Testing Metrics Evaluation**
+
+This script performs similar operations for testing data. It verifies the format of prediction files, computes metrics, and saves the reports.
+
+#### Usage
+
+```bash
+python testing_metrics.py <true_filepath> <pred_folder> <output_folder>
+```
+
+#### Parameters
+- **`<true_filepath>`**: Path to the Excel file containing ground truth data (e.g., `test_data.xlsx`).
+- **`<pred_folder>`**: Path to the folder containing prediction Excel files.
+- **`<output_folder>`**: Path to the folder where metrics reports will be saved.
+
+#### Example
+
+```bash
+python testing_metrics.py test_data.xlsx testing metrics_reports_test
+```
+
+---
+
+#### Output
+
+For both scripts, the output is a set of JSON files saved in the specified output folder. Each file corresponds to a prediction file and contains:
+- **Overall Metrics**:
+  - Mean AUC
+  - Balanced Accuracy
+  - Average Precision
+  - Average Sensitivity
+  - Average F1 Score
+  - Average Specificity
+- **Class-Wise Metrics**:
+  - Precision, Recall, F1 Score, Specificity, Accuracy, and AUC for each class.
+
+
 ## Citation
 Please use the following citations for citing our work.
 

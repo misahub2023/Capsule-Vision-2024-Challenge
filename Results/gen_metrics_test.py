@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import re
 import json
+import argparse
 from sklearn.metrics import (
     roc_auc_score, precision_score, recall_score, f1_score,
     balanced_accuracy_score, confusion_matrix, accuracy_score
@@ -30,14 +31,14 @@ def class_wise_metrics(y_true, y_pred):
         f1 = f1_score(true_binary, pred_binary, zero_division=0)
         specificity = specificity_score(true_binary, pred_binary)
         accuracy = accuracy_score(true_binary, pred_binary)
-        auc=roc_auc_score(y_true[:, i], y_pred[:, i])
+        auc = roc_auc_score(y_true[:, i], y_pred[:, i])
         class_metrics[class_name] = {
             'precision': precision,
             'recall': recall,
             'f1_score': f1,
             'specificity': specificity,
             'accuracy': accuracy,
-            'auc':auc
+            'auc': auc
         }
     return class_metrics
 
@@ -135,8 +136,11 @@ def process_files(true_filepath, pred_folder, output_folder):
         output_path = os.path.join(output_folder, f"{os.path.splitext(pred_file)[0]}_metrics.json")
         save_metrics_report(metrics_report, output_path)
 
-true_filepath = 'test_data.xlsx'
-pred_folder = 'testing'
-output_folder = 'metrics_reports_test'
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process and generate metrics from prediction files.")
+    parser.add_argument("true_filepath", help="Path to the true labels Excel file.")
+    parser.add_argument("pred_folder", help="Path to the folder containing prediction files.")
+    parser.add_argument("output_folder", help="Path to the folder where metrics reports will be saved.")
+    args = parser.parse_args()
 
-process_files(true_filepath, pred_folder, output_folder)
+    process_files(args.true_filepath, args.pred_folder, args.output_folder)

@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import re
 import json
+import argparse
 from sklearn.metrics import (
     roc_auc_score, precision_score, recall_score, f1_score,
     balanced_accuracy_score, confusion_matrix, accuracy_score
@@ -140,9 +141,11 @@ def process_files(true_filepath, pred_folder, output_folder):
             print(f"Error processing file '{pred_file}': {e}")
             continue  
 
-true_filepath = 'training_data.xlsx'
-pred_folder = 'training_fixed'
-output_folder = 'metrics_reports_train'
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Process and generate metrics from prediction files.")
+    parser.add_argument("true_filepath", help="Path to the true labels Excel file.")
+    parser.add_argument("pred_folder", help="Path to the folder containing prediction files.")
+    parser.add_argument("output_folder", help="Path to the folder where metrics reports will be saved.")
+    args = parser.parse_args()
 
-process_files(true_filepath, pred_folder, output_folder)
-
+    process_files(args.true_filepath, args.pred_folder, args.output_folder)
