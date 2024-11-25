@@ -20,6 +20,7 @@
 - [Sample Evaluation by Organizing members](#sample-evaluation-by-organizing-members)
 - [Submission Format](#submission-format)
 - [Results](https://github.com/misahub2023/Capsule-Vision-2024-Challenge/edit/main/README.md#results)
+- [Benchmarking Experiments](https://github.com/misahub2023/Capsule-Vision-2024-Challenge/tree/main/Benchmarking_Experiments)
 ## Challenge Overview
 The aim of the challenge was to provide an opportunity
 for the development, testing and evaluation of AI models
